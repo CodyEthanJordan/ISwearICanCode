@@ -1,2 +1,2 @@
-# HaikuMe
-Website to auto-generate haikus from Twitter user data
+# ISwearICanCode
+A program that let's you "program" anything without fear of error.

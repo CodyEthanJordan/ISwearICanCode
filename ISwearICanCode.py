@@ -70,6 +70,8 @@ def typing(code):
 		
 		
 		if (ch == '\x08'):
+			if (cursor == 0):
+				continue
 			last = code[cursor-1]
 			if (last != '\n' and last != '\r' and last != '\t'):
 				print("\b \b", end="")
@@ -126,12 +128,12 @@ try:
 		prompt += path + ">"
 		print(prompt, end="")
 		sys.stdout.flush()
-		if typing(arg+" "):
+		if typing("vim "+arg+" "):
 			done = True
 			break
 		clr()
 		
-		prompt +=  arg + "\n"
+		prompt += "vim " + arg + "\n"
 		
 		typing(io(arg))
 		clr()
