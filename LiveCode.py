@@ -50,10 +50,12 @@ while (ch != '\x1b'):
 		code=code[1:]
 		
 		if (next == "\r" or next=="\n"):
-			print()
+			print("\r")
+			
 		
 		else:
-			sys.stdout.write(next)
+			print(next, end="")
+#			sys.stdout.write(next)
 			sys.stdout.flush()
 		
 clr()
